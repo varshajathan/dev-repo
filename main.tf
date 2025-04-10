@@ -1,7 +1,11 @@
+locals {
+  decoded_creds = base64decode(var.gcp_credentials)
+}
+
 provider "google" {
-  gcp_credentials = base64decode(var.gcp_credentials)
-  project = var.project_id
-  region  = var.region
+  credentials = local.decoded_creds
+  project     = var.project_id
+  region      = var.region
 }
 
 resource "google_compute_instance" "default" {
