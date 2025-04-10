@@ -19,7 +19,7 @@ variable "machine_type" {
   default     = "e2-medium"
 }
 
-variable "name" {
+variable "names" {
   description = "name of the vm instances"
   type        = string
 }
