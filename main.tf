@@ -1,5 +1,5 @@
 provider "google" {
-  gcp_credentials = var.gcp_credentials
+  gcp_credentials = base64decode(var.gcp_credentials)
   project = var.project_id
   region  = var.region
 }
