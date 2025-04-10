@@ -10,7 +10,7 @@ provider "google" {
 
 resource "google_compute_instance" "default" {
   //name         = "web-server"
-  name         = var.name
+  name         = var.names
   machine_type = var.machine_type
   zone         = "${var.region}-a"
 
